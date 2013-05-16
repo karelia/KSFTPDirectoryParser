@@ -8,6 +8,10 @@
 
 #import "KSFTPParserTests.h"
 
+#import "FTPDirectoryParser.h"
+
+using namespace WebCore;
+
 @implementation KSFTPParserTests
 
 - (void)setUp
@@ -26,7 +30,17 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in KSFTPParserTests");
+    const char* input = "This is a test";
+
+    struct ListState state;
+    memset(&state, 0, sizeof(state));
+
+    struct ListResult result;
+    memset(&result, 0, sizeof(result));
+
+    FTPEntryType type = parseOneFTPLine(input, state, result);
+
+    STAssertEquals(type, FTPMiscEntry, @"expected junk type got %d", type);
 }
 
 @end

@@ -18,6 +18,8 @@
 
 #define WTF_ARRAY_LENGTH(x) 32
 
+#ifdef __cpp
 namespace WTF {
 }
+#endif
 

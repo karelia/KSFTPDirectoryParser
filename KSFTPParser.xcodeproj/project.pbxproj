@@ -13,11 +13,11 @@
 		2238077A1744F1FE0057E044 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223807621744F1FD0057E044 /* Cocoa.framework */; };
 		2238077D1744F1FE0057E044 /* KSFTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2238075F1744F1FD0057E044 /* KSFTPParser.framework */; };
 		223807831744F1FE0057E044 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223807811744F1FE0057E044 /* InfoPlist.strings */; };
-		223807861744F1FE0057E044 /* KSFTPParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223807851744F1FE0057E044 /* KSFTPParserTests.m */; };
+		223807861744F1FE0057E044 /* KSFTPParserTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807851744F1FE0057E044 /* KSFTPParserTests.mm */; };
 		223807981744F3450057E044 /* ASCIICType.h in Headers */ = {isa = PBXBuildFile; fileRef = 223807941744F3450057E044 /* ASCIICType.h */; };
 		223807991744F3450057E044 /* WTFString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807961744F3450057E044 /* WTFString.mm */; };
 		2238079A1744F3450057E044 /* WTFString.h in Headers */ = {isa = PBXBuildFile; fileRef = 223807971744F3450057E044 /* WTFString.h */; };
-		2238079D1744F3BD0057E044 /* FTPDirectoryParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2238079B1744F3BD0057E044 /* FTPDirectoryParser.h */; };
+		2238079D1744F3BD0057E044 /* FTPDirectoryParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2238079B1744F3BD0057E044 /* FTPDirectoryParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2238079E1744F3BD0057E044 /* FTPDirectoryParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2238079C1744F3BD0057E044 /* FTPDirectoryParser.mm */; };
 		223807A11744F3E50057E044 /* KSFTPParser.h in Resources */ = {isa = PBXBuildFile; fileRef = 2238079F1744F3E50057E044 /* KSFTPParser.h */; };
 		223807A21744F3E50057E044 /* KSFTPParser.m in Resources */ = {isa = PBXBuildFile; fileRef = 223807A01744F3E50057E044 /* KSFTPParser.m */; };
@@ -48,7 +48,7 @@
 		223807801744F1FE0057E044 /* KSFTPParserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KSFTPParserTests-Info.plist"; sourceTree = "<group>"; };
 		223807821744F1FE0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		223807841744F1FE0057E044 /* KSFTPParserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSFTPParserTests.h; sourceTree = "<group>"; };
-		223807851744F1FE0057E044 /* KSFTPParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSFTPParserTests.m; sourceTree = "<group>"; };
+		223807851744F1FE0057E044 /* KSFTPParserTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KSFTPParserTests.mm; sourceTree = "<group>"; };
 		223807941744F3450057E044 /* ASCIICType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCIICType.h; sourceTree = "<group>"; };
 		223807961744F3450057E044 /* WTFString.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WTFString.mm; sourceTree = "<group>"; };
 		223807971744F3450057E044 /* WTFString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFString.h; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				223807841744F1FE0057E044 /* KSFTPParserTests.h */,
-				223807851744F1FE0057E044 /* KSFTPParserTests.m */,
+				223807851744F1FE0057E044 /* KSFTPParserTests.mm */,
 				2238077F1744F1FE0057E044 /* Supporting Files */,
 			);
 			path = KSFTPParserTests;
@@ -314,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223807861744F1FE0057E044 /* KSFTPParserTests.m in Sources */,
+				223807861744F1FE0057E044 /* KSFTPParserTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +374,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -400,6 +401,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
@@ -414,7 +416,6 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				INFOPLIST_FILE = "KSFTPParser/KSFTPParser-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
@@ -430,7 +431,6 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				INFOPLIST_FILE = "KSFTPParser/KSFTPParser-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
