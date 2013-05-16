@@ -30,7 +30,7 @@ public:
     void truncate(int64_t length);
     static String number(int64_t value);
     uint64_t toUInt();
-
+    
 private:
     NSString* string;
 };

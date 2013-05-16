@@ -71,24 +71,6 @@
 #ifndef FTPDirectoryParser_h
 #define FTPDirectoryParser_h
 
-// ##### COMPAT
-
-#import <Foundation/Foundation.h>
-
-#define ENABLE(x) 1
-#define OS(x) 0
-
-#include <memory.h>
-#include <assert.h>
-#include <stdint.h>
-
-
-#define ASSERT assert
-
-#define WTF_ARRAY_LENGTH(x) 32
-
-
-// #############
 #include <wtf/text/WTFString.h>
 
 #include <time.h>
