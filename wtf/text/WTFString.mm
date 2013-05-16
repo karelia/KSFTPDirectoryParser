@@ -55,3 +55,9 @@ uint64_t String::toUInt()
 {
     return [string integerValue];
 }
+
+NSString* String::cocoaString()
+{
+    return string ? string : @"";
+}
+

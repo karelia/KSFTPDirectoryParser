@@ -34,6 +34,8 @@ public:
 
     String& operator=( const String& rhs );
 
+    NSString* cocoaString();
+
 private:
     NSString* string;
 };
