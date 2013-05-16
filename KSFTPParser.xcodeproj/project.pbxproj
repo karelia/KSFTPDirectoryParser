@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		223807631744F1FD0057E044 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223807621744F1FD0057E044 /* Cocoa.framework */; };
+		2238076D1744F1FD0057E044 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2238076B1744F1FD0057E044 /* InfoPlist.strings */; };
+		223807711744F1FD0057E044 /* KSFTPParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 223807701744F1FD0057E044 /* KSFTPParser.m */; };
+		223807791744F1FE0057E044 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223807781744F1FE0057E044 /* SenTestingKit.framework */; };
+		2238077A1744F1FE0057E044 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223807621744F1FD0057E044 /* Cocoa.framework */; };
+		2238077D1744F1FE0057E044 /* KSFTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2238075F1744F1FD0057E044 /* KSFTPParser.framework */; };
+		223807831744F1FE0057E044 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223807811744F1FE0057E044 /* InfoPlist.strings */; };
+		223807861744F1FE0057E044 /* KSFTPParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223807851744F1FE0057E044 /* KSFTPParserTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2238077B1744F1FE0057E044 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223807561744F1FD0057E044 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2238075E1744F1FD0057E044;
+			remoteInfo = KSFTPParser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2238075F1744F1FD0057E044 /* KSFTPParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KSFTPParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		223807621744F1FD0057E044 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		223807651744F1FD0057E044 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		223807661744F1FD0057E044 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		223807671744F1FD0057E044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2238076A1744F1FD0057E044 /* KSFTPParser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KSFTPParser-Info.plist"; sourceTree = "<group>"; };
+		2238076C1744F1FD0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2238076E1744F1FD0057E044 /* KSFTPParser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KSFTPParser-Prefix.pch"; sourceTree = "<group>"; };
+		2238076F1744F1FD0057E044 /* KSFTPParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSFTPParser.h; sourceTree = "<group>"; };
+		223807701744F1FD0057E044 /* KSFTPParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSFTPParser.m; sourceTree = "<group>"; };
+		223807771744F1FE0057E044 /* KSFTPParserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSFTPParserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		223807781744F1FE0057E044 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		223807801744F1FE0057E044 /* KSFTPParserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KSFTPParserTests-Info.plist"; sourceTree = "<group>"; };
+		223807821744F1FE0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		223807841744F1FE0057E044 /* KSFTPParserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSFTPParserTests.h; sourceTree = "<group>"; };
+		223807851744F1FE0057E044 /* KSFTPParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSFTPParserTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2238075B1744F1FD0057E044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223807631744F1FD0057E044 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223807731744F1FD0057E044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223807791744F1FE0057E044 /* SenTestingKit.framework in Frameworks */,
+				2238077A1744F1FE0057E044 /* Cocoa.framework in Frameworks */,
+				2238077D1744F1FE0057E044 /* KSFTPParser.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		223807551744F1FD0057E044 = {
+			isa = PBXGroup;
+			children = (
+				223807681744F1FD0057E044 /* KSFTPParser */,
+				2238077E1744F1FE0057E044 /* KSFTPParserTests */,
+				223807611744F1FD0057E044 /* Frameworks */,
+				223807601744F1FD0057E044 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		223807601744F1FD0057E044 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2238075F1744F1FD0057E044 /* KSFTPParser.framework */,
+				223807771744F1FE0057E044 /* KSFTPParserTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		223807611744F1FD0057E044 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				223807621744F1FD0057E044 /* Cocoa.framework */,
+				223807781744F1FE0057E044 /* SenTestingKit.framework */,
+				223807641744F1FD0057E044 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		223807641744F1FD0057E044 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				223807651744F1FD0057E044 /* AppKit.framework */,
+				223807661744F1FD0057E044 /* CoreData.framework */,
+				223807671744F1FD0057E044 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		223807681744F1FD0057E044 /* KSFTPParser */ = {
+			isa = PBXGroup;
+			children = (
+				2238076F1744F1FD0057E044 /* KSFTPParser.h */,
+				223807701744F1FD0057E044 /* KSFTPParser.m */,
+				223807691744F1FD0057E044 /* Supporting Files */,
+			);
+			path = KSFTPParser;
+			sourceTree = "<group>";
+		};
+		223807691744F1FD0057E044 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2238076A1744F1FD0057E044 /* KSFTPParser-Info.plist */,
+				2238076B1744F1FD0057E044 /* InfoPlist.strings */,
+				2238076E1744F1FD0057E044 /* KSFTPParser-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2238077E1744F1FE0057E044 /* KSFTPParserTests */ = {
+			isa = PBXGroup;
+			children = (
+				223807841744F1FE0057E044 /* KSFTPParserTests.h */,
+				223807851744F1FE0057E044 /* KSFTPParserTests.m */,
+				2238077F1744F1FE0057E044 /* Supporting Files */,
+			);
+			path = KSFTPParserTests;
+			sourceTree = "<group>";
+		};
+		2238077F1744F1FE0057E044 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				223807801744F1FE0057E044 /* KSFTPParserTests-Info.plist */,
+				223807811744F1FE0057E044 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2238075C1744F1FD0057E044 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2238075E1744F1FD0057E044 /* KSFTPParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 223807891744F1FE0057E044 /* Build configuration list for PBXNativeTarget "KSFTPParser" */;
+			buildPhases = (
+				2238075A1744F1FD0057E044 /* Sources */,
+				2238075B1744F1FD0057E044 /* Frameworks */,
+				2238075C1744F1FD0057E044 /* Headers */,
+				2238075D1744F1FD0057E044 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSFTPParser;
+			productName = KSFTPParser;
+			productReference = 2238075F1744F1FD0057E044 /* KSFTPParser.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		223807761744F1FD0057E044 /* KSFTPParserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2238078C1744F1FE0057E044 /* Build configuration list for PBXNativeTarget "KSFTPParserTests" */;
+			buildPhases = (
+				223807721744F1FD0057E044 /* Sources */,
+				223807731744F1FD0057E044 /* Frameworks */,
+				223807741744F1FD0057E044 /* Resources */,
+				223807751744F1FD0057E044 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2238077C1744F1FE0057E044 /* PBXTargetDependency */,
+			);
+			name = KSFTPParserTests;
+			productName = KSFTPParserTests;
+			productReference = 223807771744F1FE0057E044 /* KSFTPParserTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		223807561744F1FD0057E044 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Karelia;
+			};
+			buildConfigurationList = 223807591744F1FD0057E044 /* Build configuration list for PBXProject "KSFTPParser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 223807551744F1FD0057E044;
+			productRefGroup = 223807601744F1FD0057E044 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2238075E1744F1FD0057E044 /* KSFTPParser */,
+				223807761744F1FD0057E044 /* KSFTPParserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2238075D1744F1FD0057E044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2238076D1744F1FD0057E044 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223807741744F1FD0057E044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223807831744F1FE0057E044 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		223807751744F1FD0057E044 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2238075A1744F1FD0057E044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223807711744F1FD0057E044 /* KSFTPParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223807721744F1FD0057E044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223807861744F1FE0057E044 /* KSFTPParserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2238077C1744F1FE0057E044 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2238075E1744F1FD0057E044 /* KSFTPParser */;
+			targetProxy = 2238077B1744F1FE0057E044 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2238076B1744F1FD0057E044 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2238076C1744F1FD0057E044 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		223807811744F1FE0057E044 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				223807821744F1FE0057E044 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		223807871744F1FE0057E044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		223807881744F1FE0057E044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2238078A1744F1FE0057E044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
+				INFOPLIST_FILE = "KSFTPParser/KSFTPParser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		2238078B1744F1FE0057E044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
+				INFOPLIST_FILE = "KSFTPParser/KSFTPParser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		2238078D1744F1FE0057E044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
+				INFOPLIST_FILE = "KSFTPParserTests/KSFTPParserTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2238078E1744F1FE0057E044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
+				INFOPLIST_FILE = "KSFTPParserTests/KSFTPParserTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		223807591744F1FD0057E044 /* Build configuration list for PBXProject "KSFTPParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				223807871744F1FE0057E044 /* Debug */,
+				223807881744F1FE0057E044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		223807891744F1FE0057E044 /* Build configuration list for PBXNativeTarget "KSFTPParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2238078A1744F1FE0057E044 /* Debug */,
+				2238078B1744F1FE0057E044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2238078C1744F1FE0057E044 /* Build configuration list for PBXNativeTarget "KSFTPParserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2238078D1744F1FE0057E044 /* Debug */,
+				2238078E1744F1FE0057E044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 223807561744F1FD0057E044 /* Project object */;
+}
