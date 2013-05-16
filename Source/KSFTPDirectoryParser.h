@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, KSFTPEntryType)
     KSFTPJunkEntry
 };
 
-@interface KSFTPParser : NSObject
+@interface KSFTPDirectoryParser : NSObject
 
 + (NSArray*)parseData:(NSData*)data includingExtraEntries:(BOOL)includingExtraEntries;
 + (NSArray*)parseString:(NSString*)string includingExtraEntries:(BOOL)includingExtraEntries;

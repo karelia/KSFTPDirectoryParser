@@ -6,18 +6,18 @@
 //
 //
 
-#import "KSFTPParser.h"
+#import "KSFTPDirectoryParser.h"
 #import "FTPDirectoryParser.h"
 
 #import <time.h>
 
-@interface KSFTPParser()
+@interface KSFTPDirectoryParser()
 
 @end
 
 using namespace WebCore;
 
-@implementation KSFTPParser
+@implementation KSFTPDirectoryParser
 
 + (NSArray*)parseData:(NSData*)data includingExtraEntries:(BOOL)includingExtraEntries
 {

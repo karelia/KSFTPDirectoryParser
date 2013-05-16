@@ -7,13 +7,13 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "KSFTPParser.h"
+#import "KSFTPDirectoryParser.h"
 
-@interface KSFTPParserTests : SenTestCase
+@interface KSFTPDirectoryParserTests : SenTestCase
 
 @end
 
-@implementation KSFTPParserTests
+@implementation KSFTPDirectoryParserTests
 
 - (BOOL)checkItems:(NSArray*)items
 {
@@ -72,7 +72,7 @@
 - (void)testJunkInput
 {
     NSString* input = @"Blah\nBlah\nBlah";
-    NSArray* items = [KSFTPParser parseString:input includingExtraEntries:YES];
+    NSArray* items = [KSFTPDirectoryParser parseString:input includingExtraEntries:YES];
 
     STAssertEquals([items count], 3UL, @"expected 3 results, got %ld", [items count]);
     for (NSDictionary* item in items)
@@ -90,7 +90,7 @@
          "11-12-69  03:04AM                7352 file1.txt\r\n"
          "11-12-69  05:06AM                5246 file2.txt\r\n";
 
-    NSArray* items = [KSFTPParser parseString:input includingExtraEntries:NO];
+    NSArray* items = [KSFTPDirectoryParser parseString:input includingExtraEntries:NO];
     STAssertTrue([self checkItems:items], @"unexpected output: %@", items);
 }
 
@@ -101,7 +101,7 @@
     "-rw-------   1 user  staff     3 Nov  12  1969 file1.txt\r\n"
     "-rw-------   1 user  staff     3 Nov  12  1969 file2.txt\r\n\r\n";
 
-    NSArray* items = [KSFTPParser parseString:input includingExtraEntries:NO];
+    NSArray* items = [KSFTPDirectoryParser parseString:input includingExtraEntries:NO];
     STAssertTrue([self checkItems:items], @"unexpected output: %@", items);
 }
 
