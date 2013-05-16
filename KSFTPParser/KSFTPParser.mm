@@ -41,6 +41,8 @@ using namespace WebCore;
     NSMutableArray* results = [NSMutableArray array];
     NSArray* lines = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSTimeZone* zone = [NSTimeZone timeZoneWithName:@"UTC"];
+
     for (NSString* line in lines)
     {
         FTPEntryType type = parseOneFTPLine([line UTF8String], state, result);
@@ -48,12 +50,12 @@ using namespace WebCore;
         {
             NSDateComponents* components = [[NSDateComponents alloc] init];
             components.year = result.modifiedTime.tm_year;
-            components.month = result.modifiedTime.tm_mon;
+            components.month = result.modifiedTime.tm_mon + 1;
             components.day = result.modifiedTime.tm_mday;
             components.hour = result.modifiedTime.tm_hour;
             components.minute = result.modifiedTime.tm_min;
             components.second = result.modifiedTime.tm_sec;
-            components.timeZone = [NSTimeZone systemTimeZone];
+            components.timeZone = zone;
             NSDate* time = [calendar dateFromComponents:components];
             [components release];
             NSDictionary* info = @{
