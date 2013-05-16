@@ -11,7 +11,7 @@
 		2238076D1744F1FD0057E044 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2238076B1744F1FD0057E044 /* InfoPlist.strings */; };
 		223807791744F1FE0057E044 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223807781744F1FE0057E044 /* SenTestingKit.framework */; };
 		2238077A1744F1FE0057E044 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223807621744F1FD0057E044 /* Cocoa.framework */; };
-		2238077D1744F1FE0057E044 /* KSFTPDirectoryParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2238075F1744F1FD0057E044 /* KSFTPDirectoryParser.framework */; };
+		2238077D1744F1FE0057E044 /* Framework Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2238075F1744F1FD0057E044 /* Framework Mac.framework */; };
 		223807831744F1FE0057E044 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223807811744F1FE0057E044 /* InfoPlist.strings */; };
 		223807861744F1FE0057E044 /* KSFTPDirectoryParserTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807851744F1FE0057E044 /* KSFTPDirectoryParserTests.mm */; };
 		223807981744F3450057E044 /* ASCIICType.h in Headers */ = {isa = PBXBuildFile; fileRef = 223807941744F3450057E044 /* ASCIICType.h */; };
@@ -22,6 +22,16 @@
 		223807A41744F5AD0057E044 /* Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 223807A31744F5AC0057E044 /* Compatibility.h */; };
 		223807AA1744FC760057E044 /* KSFTPDirectoryParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 223807A81744FC760057E044 /* KSFTPDirectoryParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		223807AB1744FC760057E044 /* KSFTPDirectoryParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807A91744FC760057E044 /* KSFTPDirectoryParser.mm */; };
+		22380824174547A00057E044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22380813174547870057E044 /* Foundation.framework */; };
+		22380832174547A00057E044 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223807781744F1FE0057E044 /* SenTestingKit.framework */; };
+		22380834174547A00057E044 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22380833174547A00057E044 /* UIKit.framework */; };
+		22380835174547A00057E044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22380813174547870057E044 /* Foundation.framework */; };
+		22380838174547A00057E044 /* libLibrary IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22380823174547A00057E044 /* libLibrary IOS.a */; };
+		22380848174547B10057E044 /* KSFTPDirectoryParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807A91744FC760057E044 /* KSFTPDirectoryParser.mm */; };
+		22380849174547B10057E044 /* FTPDirectoryParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2238079C1744F3BD0057E044 /* FTPDirectoryParser.mm */; };
+		2238084A174548710057E044 /* FTPDirectoryParserTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807841744F1FE0057E044 /* FTPDirectoryParserTests.mm */; };
+		2238084B174548710057E044 /* KSFTPDirectoryParserTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807851744F1FE0057E044 /* KSFTPDirectoryParserTests.mm */; };
+		2238084C174548BE0057E044 /* WTFString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807961744F3450057E044 /* WTFString.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +42,29 @@
 			remoteGlobalIDString = 2238075E1744F1FD0057E044;
 			remoteInfo = KSFTPParser;
 		};
+		22380836174547A00057E044 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223807561744F1FD0057E044 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22380822174547A00057E044;
+			remoteInfo = "KSFTPDirectoryParser iOS";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		22380821174547A00057E044 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2238075F1744F1FD0057E044 /* KSFTPDirectoryParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KSFTPDirectoryParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2238075F1744F1FD0057E044 /* Framework Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Framework Mac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223807621744F1FD0057E044 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		223807651744F1FD0057E044 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		223807661744F1FD0057E044 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -57,6 +86,10 @@
 		223807A31744F5AC0057E044 /* Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compatibility.h; sourceTree = "<group>"; };
 		223807A81744FC760057E044 /* KSFTPDirectoryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFTPDirectoryParser.h; sourceTree = "<group>"; };
 		223807A91744FC760057E044 /* KSFTPDirectoryParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSFTPDirectoryParser.mm; sourceTree = "<group>"; };
+		22380813174547870057E044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		22380823174547A00057E044 /* libLibrary IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLibrary IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22380831174547A00057E044 /* UnitTests IOS.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests IOS.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22380833174547A00057E044 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +107,26 @@
 			files = (
 				223807791744F1FE0057E044 /* SenTestingKit.framework in Frameworks */,
 				2238077A1744F1FE0057E044 /* Cocoa.framework in Frameworks */,
-				2238077D1744F1FE0057E044 /* KSFTPDirectoryParser.framework in Frameworks */,
+				2238077D1744F1FE0057E044 /* Framework Mac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22380820174547A00057E044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22380824174547A00057E044 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2238082D174547A00057E044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22380832174547A00057E044 /* SenTestingKit.framework in Frameworks */,
+				22380834174547A00057E044 /* UIKit.framework in Frameworks */,
+				22380835174547A00057E044 /* Foundation.framework in Frameworks */,
+				22380838174547A00057E044 /* libLibrary IOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +146,10 @@
 		223807601744F1FD0057E044 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2238075F1744F1FD0057E044 /* KSFTPDirectoryParser.framework */,
+				2238075F1744F1FD0057E044 /* Framework Mac.framework */,
 				223807771744F1FE0057E044 /* KSFTPParserTests.octest */,
+				22380823174547A00057E044 /* libLibrary IOS.a */,
+				22380831174547A00057E044 /* UnitTests IOS.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +159,8 @@
 			children = (
 				223807621744F1FD0057E044 /* Cocoa.framework */,
 				223807781744F1FE0057E044 /* SenTestingKit.framework */,
+				22380813174547870057E044 /* Foundation.framework */,
+				22380833174547A00057E044 /* UIKit.framework */,
 				223807641744F1FD0057E044 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -199,9 +255,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2238075E1744F1FD0057E044 /* KSFTPDirectoryParser */ = {
+		2238075E1744F1FD0057E044 /* Framework Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 223807891744F1FE0057E044 /* Build configuration list for PBXNativeTarget "KSFTPDirectoryParser" */;
+			buildConfigurationList = 223807891744F1FE0057E044 /* Build configuration list for PBXNativeTarget "Framework Mac" */;
 			buildPhases = (
 				2238075A1744F1FD0057E044 /* Sources */,
 				2238075B1744F1FD0057E044 /* Frameworks */,
@@ -212,14 +268,14 @@
 			);
 			dependencies = (
 			);
-			name = KSFTPDirectoryParser;
+			name = "Framework Mac";
 			productName = KSFTPParser;
-			productReference = 2238075F1744F1FD0057E044 /* KSFTPDirectoryParser.framework */;
+			productReference = 2238075F1744F1FD0057E044 /* Framework Mac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		223807761744F1FD0057E044 /* KSFTPDirectoryParserTests */ = {
+		223807761744F1FD0057E044 /* UnitTests Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2238078C1744F1FE0057E044 /* Build configuration list for PBXNativeTarget "KSFTPDirectoryParserTests" */;
+			buildConfigurationList = 2238078C1744F1FE0057E044 /* Build configuration list for PBXNativeTarget "UnitTests Mac" */;
 			buildPhases = (
 				223807721744F1FD0057E044 /* Sources */,
 				223807731744F1FD0057E044 /* Frameworks */,
@@ -231,9 +287,45 @@
 			dependencies = (
 				2238077C1744F1FE0057E044 /* PBXTargetDependency */,
 			);
-			name = KSFTPDirectoryParserTests;
+			name = "UnitTests Mac";
 			productName = KSFTPParserTests;
 			productReference = 223807771744F1FE0057E044 /* KSFTPParserTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		22380822174547A00057E044 /* Library IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22380842174547A00057E044 /* Build configuration list for PBXNativeTarget "Library IOS" */;
+			buildPhases = (
+				2238081F174547A00057E044 /* Sources */,
+				22380820174547A00057E044 /* Frameworks */,
+				22380821174547A00057E044 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Library IOS";
+			productName = "KSFTPDirectoryParser iOS";
+			productReference = 22380823174547A00057E044 /* libLibrary IOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		22380830174547A00057E044 /* UnitTests IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22380845174547A00057E044 /* Build configuration list for PBXNativeTarget "UnitTests IOS" */;
+			buildPhases = (
+				2238082C174547A00057E044 /* Sources */,
+				2238082D174547A00057E044 /* Frameworks */,
+				2238082E174547A00057E044 /* Resources */,
+				2238082F174547A00057E044 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22380837174547A00057E044 /* PBXTargetDependency */,
+			);
+			name = "UnitTests IOS";
+			productName = "KSFTPDirectoryParser iOSTests";
+			productReference = 22380831174547A00057E044 /* UnitTests IOS.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -257,8 +349,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2238075E1744F1FD0057E044 /* KSFTPDirectoryParser */,
-				223807761744F1FD0057E044 /* KSFTPDirectoryParserTests */,
+				2238075E1744F1FD0057E044 /* Framework Mac */,
+				223807761744F1FD0057E044 /* UnitTests Mac */,
+				22380822174547A00057E044 /* Library IOS */,
+				22380830174547A00057E044 /* UnitTests IOS */,
 			);
 		};
 /* End PBXProject section */
@@ -280,6 +374,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2238082E174547A00057E044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -296,6 +397,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2238082F174547A00057E044 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -318,13 +432,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2238081F174547A00057E044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22380848174547B10057E044 /* KSFTPDirectoryParser.mm in Sources */,
+				22380849174547B10057E044 /* FTPDirectoryParser.mm in Sources */,
+				2238084C174548BE0057E044 /* WTFString.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2238082C174547A00057E044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2238084A174548710057E044 /* FTPDirectoryParserTests.mm in Sources */,
+				2238084B174548710057E044 /* KSFTPDirectoryParserTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		2238077C1744F1FE0057E044 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2238075E1744F1FD0057E044 /* KSFTPDirectoryParser */;
+			target = 2238075E1744F1FD0057E044 /* Framework Mac */;
 			targetProxy = 2238077B1744F1FE0057E044 /* PBXContainerItemProxy */;
+		};
+		22380837174547A00057E044 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22380822174547A00057E044 /* Library IOS */;
+			targetProxy = 22380836174547A00057E044 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -465,6 +603,70 @@
 			};
 			name = Release;
 		};
+		22380843174547A00057E044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/KSFTPDirectoryParser_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		22380844174547A00057E044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/KSFTPDirectoryParser_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22380846174547A00057E044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		22380847174547A00057E044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -477,7 +679,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		223807891744F1FE0057E044 /* Build configuration list for PBXNativeTarget "KSFTPDirectoryParser" */ = {
+		223807891744F1FE0057E044 /* Build configuration list for PBXNativeTarget "Framework Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2238078A1744F1FE0057E044 /* Debug */,
@@ -486,7 +688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2238078C1744F1FE0057E044 /* Build configuration list for PBXNativeTarget "KSFTPDirectoryParserTests" */ = {
+		2238078C1744F1FE0057E044 /* Build configuration list for PBXNativeTarget "UnitTests Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2238078D1744F1FE0057E044 /* Debug */,
@@ -494,6 +696,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		22380842174547A00057E044 /* Build configuration list for PBXNativeTarget "Library IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22380843174547A00057E044 /* Debug */,
+				22380844174547A00057E044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		22380845174547A00057E044 /* Build configuration list for PBXNativeTarget "UnitTests IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22380846174547A00057E044 /* Debug */,
+				22380847174547A00057E044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

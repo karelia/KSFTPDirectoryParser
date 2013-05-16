@@ -33,7 +33,7 @@
             ok = type == types[n];
             if (!ok)
             {
-                NSLog(@"expected type %ld, got %ld", types[n], type);
+                NSLog(@"expected type %ld, got %ld", (long)types[n], (long)type);
             }
 
             if (ok)
@@ -63,7 +63,7 @@
     }
     else
     {
-        NSLog(@"expected 3 results, got %ld", count);
+        NSLog(@"expected 3 results, got %ld", (long)count);
     }
 
     return ok;
@@ -74,7 +74,7 @@
     NSString* input = @"Blah\nBlah\nBlah";
     NSArray* items = [KSFTPDirectoryParser parseString:input includingExtraEntries:YES];
 
-    STAssertEquals([items count], 3UL, @"expected 3 results, got %ld", [items count]);
+    STAssertEquals([items count], (NSUInteger)3, @"expected 3 results, got %ld", [items count]);
     for (NSDictionary* item in items)
     {
         KSFTPEntryType type = (KSFTPEntryType) [item[@"type"] integerValue];
