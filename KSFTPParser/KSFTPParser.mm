@@ -9,6 +9,8 @@
 #import "KSFTPParser.h"
 #import "FTPDirectoryParser.h"
 
+#import <time.h>
+
 @interface KSFTPParser()
 
 @end
@@ -21,7 +23,11 @@ using namespace WebCore;
 {
     NSString* string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
-    return [self parseString:string];
+    NSArray* result = [self parseString:string];
+
+    [string release];
+
+    return result;
 }
 
 + (NSArray*)parseString:(NSString*)string
@@ -37,7 +43,19 @@ using namespace WebCore;
     for (NSString* line in lines)
     {
         FTPEntryType type = parseOneFTPLine([line UTF8String], state, result);
-        NSDictionary* info = @{ @"type" : @(type) };
+
+        NSDate* time = [[NSDate alloc] initWithTimeIntervalSince1970:mktime(&result.modifiedTime)];
+        NSDictionary* info = @{
+                               @"type" : @(type),
+                               @"name" : result.filename ? @(result.filename) : @"",
+                               @"link" : result.linkname ? @(result.linkname) : @"",
+                               @"valid" : @(result.valid),
+                               @"size": result.fileSize.cocoaString(),
+                               @"case" : @(result.caseSensitive),
+                               @"modified" : time
+                               };
+        [time release];
+
         [results addObject:info];
     }
 
