@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2238075E1744F1FD0057E044"
                BuildableName = "KSFTPParser.framework"
-               BlueprintName = "KSFTPParser"
+               BlueprintName = "KSFTPDirectoryParser"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,7 +30,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "223807761744F1FD0057E044"
                BuildableName = "KSFTPParserTests.octest"
-               BlueprintName = "KSFTPParserTests"
+               BlueprintName = "KSFTPDirectoryParserTests"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,7 +48,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "223807761744F1FD0057E044"
                BuildableName = "KSFTPParserTests.octest"
-               BlueprintName = "KSFTPParserTests"
+               BlueprintName = "KSFTPDirectoryParserTests"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
          </TestableReference>
