@@ -6,41 +6,27 @@
 //  Copyright (c) 2013 Karelia. All rights reserved.
 //
 
-#import "KSFTPParserTests.h"
+#import <SenTestingKit/SenTestingKit.h>
+#import "KSFTPParser.h"
 
-#import "FTPDirectoryParser.h"
+@interface KSFTPParserTests : SenTestCase
 
-using namespace WebCore;
+@end
 
 @implementation KSFTPParserTests
 
-- (void)setUp
+- (void)testJunkInput
 {
-    [super setUp];
+    NSString* testInput = @"Blah\nBlah\nBlah";
+    NSArray* items = [KSFTPParser parseString:testInput];
+
+    STAssertEquals([items count], 3UL, @"expected 3 results, got %ld", [items count]);
+    for (NSDictionary* item in items)
+    {
+        KSFTPEntryType type = (KSFTPEntryType) [item[@"type"] integerValue];
+        STAssertEquals(type, KSFTPMiscEntry, @"expected type 3, got %ld", type);
+    }
     
-    // Set-up code here.
-}
-
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    const char* input = "This is a test";
-
-    struct ListState state;
-    memset(&state, 0, sizeof(state));
-
-    struct ListResult result;
-    memset(&result, 0, sizeof(result));
-
-    FTPEntryType type = parseOneFTPLine(input, state, result);
-
-    STAssertEquals(type, FTPMiscEntry, @"expected junk type got %d", type);
 }
 
 @end
