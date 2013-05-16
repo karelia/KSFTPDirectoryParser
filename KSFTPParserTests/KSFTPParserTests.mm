@@ -18,7 +18,7 @@
 - (void)testJunkInput
 {
     NSString* input = @"Blah\nBlah\nBlah";
-    NSArray* items = [KSFTPParser parseString:input];
+    NSArray* items = [KSFTPParser parseString:input includingExtraEntries:YES];
 
     STAssertEquals([items count], 3UL, @"expected 3 results, got %ld", [items count]);
     for (NSDictionary* item in items)
@@ -47,7 +47,7 @@
     "01-10-13  11:01AM                12349 the-band.html\r\n"
     "01-10-13  11:02AM                7723 videos.html";
 
-    NSArray* items = [KSFTPParser parseString:input];
+    NSArray* items = [KSFTPParser parseString:input includingExtraEntries:NO];
 
     NSLog(@"items %@", items);
     
@@ -59,5 +59,25 @@
     }
 
     
+}
+
+- (void)testUnix
+{
+    NSString* input = @"total 1\r\n"
+    "-rw-------   1 user  staff     3 Mar  6  2012 file1.txt\r\n"
+    "-rw-------   1 user  staff     3 Mar  6  2012 file2.txt\r\n\r\n";
+
+    NSArray* items = [KSFTPParser parseString:input includingExtraEntries:NO];
+
+    NSLog(@"items %@", items);
+
+    STAssertEquals([items count], 3UL, @"expected 3 results, got %ld", [items count]);
+    for (NSDictionary* item in items)
+    {
+        KSFTPEntryType type = (KSFTPEntryType) [item[@"type"] integerValue];
+        STAssertEquals(type, KSFTPMiscEntry, @"expected type 3, got %ld", type);
+    }
+    
+
 }
 @end

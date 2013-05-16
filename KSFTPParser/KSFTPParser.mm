@@ -19,18 +19,18 @@ using namespace WebCore;
 
 @implementation KSFTPParser
 
-+ (NSArray*)parseData:(NSData*)data
++ (NSArray*)parseData:(NSData*)data includingExtraEntries:(BOOL)includingExtraEntries
 {
     NSString* string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
-    NSArray* result = [self parseString:string];
+    NSArray* result = [self parseString:string includingExtraEntries:includingExtraEntries];
 
     [string release];
 
     return result;
 }
 
-+ (NSArray*)parseString:(NSString*)string
++ (NSArray*)parseString:(NSString*)string includingExtraEntries:(BOOL)includingExtraEntries
 {
     struct ListState state;
     memset(&state, 0, sizeof(state));
@@ -40,23 +40,34 @@ using namespace WebCore;
 
     NSMutableArray* results = [NSMutableArray array];
     NSArray* lines = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
     for (NSString* line in lines)
     {
         FTPEntryType type = parseOneFTPLine([line UTF8String], state, result);
-
-        NSDate* time = [[NSDate alloc] initWithTimeIntervalSince1970:mktime(&result.modifiedTime)];
-        NSDictionary* info = @{
-                               @"type" : @(type),
-                               @"name" : result.filename ? @(result.filename) : @"",
-                               @"link" : result.linkname ? @(result.linkname) : @"",
-                               @"valid" : @(result.valid),
-                               @"size": result.fileSize.cocoaString(),
-                               @"case" : @(result.caseSensitive),
-                               @"modified" : time
-                               };
-        [time release];
-
-        [results addObject:info];
+        if (includingExtraEntries || ((type != FTPJunkEntry) && (type != FTPMiscEntry)))
+        {
+            NSDateComponents* components = [[NSDateComponents alloc] init];
+            components.year = result.modifiedTime.tm_year;
+            components.month = result.modifiedTime.tm_mon;
+            components.day = result.modifiedTime.tm_mday;
+            components.hour = result.modifiedTime.tm_hour;
+            components.minute = result.modifiedTime.tm_min;
+            components.second = result.modifiedTime.tm_sec;
+            components.timeZone = [NSTimeZone systemTimeZone];
+            NSDate* time = [calendar dateFromComponents:components];
+            [components release];
+            NSDictionary* info = @{
+                                   @"type" : @(type),
+                                   @"name" : result.filename ? @(result.filename) : @"",
+                                   @"link" : result.linkname ? @(result.linkname) : @"",
+                                   @"valid" : @(result.valid),
+                                   @"size": result.fileSize.cocoaString(),
+                                   @"case" : @(result.caseSensitive),
+                                   @"modified" : time
+                                   };
+            
+            [results addObject:info];
+        }
     }
 
     return results;

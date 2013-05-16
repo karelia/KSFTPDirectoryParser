@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, KSFTPEntryType)
 
 @interface KSFTPParser : NSObject
 
-+ (NSArray*)parseData:(NSData*)data;
-+ (NSArray*)parseString:(NSString*)string;
++ (NSArray*)parseData:(NSData*)data includingExtraEntries:(BOOL)includingExtraEntries;
++ (NSArray*)parseString:(NSString*)string includingExtraEntries:(BOOL)includingExtraEntries;
 
 @end
