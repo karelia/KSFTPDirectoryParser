@@ -40,12 +40,12 @@
 		223807651744F1FD0057E044 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		223807661744F1FD0057E044 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		223807671744F1FD0057E044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2238076A1744F1FD0057E044 /* KSFTPParser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KSFTPParser-Info.plist"; sourceTree = "<group>"; };
+		2238076A1744F1FD0057E044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2238076C1744F1FD0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2238076E1744F1FD0057E044 /* KSFTPParser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KSFTPParser-Prefix.pch"; sourceTree = "<group>"; };
+		2238076E1744F1FD0057E044 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		223807771744F1FE0057E044 /* KSFTPParserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSFTPParserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		223807781744F1FE0057E044 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		223807801744F1FE0057E044 /* KSFTPParserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KSFTPParserTests-Info.plist"; sourceTree = "<group>"; };
+		223807801744F1FE0057E044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223807821744F1FE0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		223807841744F1FE0057E044 /* FTPDirectoryParserTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FTPDirectoryParserTests.mm; sourceTree = "<group>"; };
 		223807851744F1FE0057E044 /* KSFTPParserTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KSFTPParserTests.mm; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		223807551744F1FD0057E044 = {
 			isa = PBXGroup;
 			children = (
-				223807681744F1FD0057E044 /* KSFTPParser */,
-				2238077E1744F1FE0057E044 /* KSFTPParserTests */,
+				223807681744F1FD0057E044 /* Source */,
+				2238077E1744F1FE0057E044 /* Tests */,
 				223807611744F1FD0057E044 /* Frameworks */,
 				223807601744F1FD0057E044 /* Products */,
 			);
@@ -120,7 +120,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		223807681744F1FD0057E044 /* KSFTPParser */ = {
+		223807681744F1FD0057E044 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				223807A81744FC760057E044 /* KSFTPParser.h */,
@@ -131,33 +131,33 @@
 				223807931744F3450057E044 /* wtf */,
 				223807691744F1FD0057E044 /* Supporting Files */,
 			);
-			path = KSFTPParser;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		223807691744F1FD0057E044 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2238076A1744F1FD0057E044 /* KSFTPParser-Info.plist */,
+				2238076A1744F1FD0057E044 /* Info.plist */,
 				2238076B1744F1FD0057E044 /* InfoPlist.strings */,
-				2238076E1744F1FD0057E044 /* KSFTPParser-Prefix.pch */,
+				2238076E1744F1FD0057E044 /* Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2238077E1744F1FE0057E044 /* KSFTPParserTests */ = {
+		2238077E1744F1FE0057E044 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				223807841744F1FE0057E044 /* FTPDirectoryParserTests.mm */,
 				223807851744F1FE0057E044 /* KSFTPParserTests.mm */,
 				2238077F1744F1FE0057E044 /* Supporting Files */,
 			);
-			path = KSFTPParserTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		2238077F1744F1FE0057E044 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				223807801744F1FE0057E044 /* KSFTPParserTests-Info.plist */,
+				223807801744F1FE0057E044 /* Info.plist */,
 				223807811744F1FE0057E044 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -169,8 +169,7 @@
 				223807941744F3450057E044 /* ASCIICType.h */,
 				223807951744F3450057E044 /* text */,
 			);
-			name = wtf;
-			path = ../wtf;
+			path = wtf;
 			sourceTree = "<group>";
 		};
 		223807951744F3450057E044 /* text */ = {
@@ -246,7 +245,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Karelia;
 			};
-			buildConfigurationList = 223807591744F1FD0057E044 /* Build configuration list for PBXProject "KSFTPParser" */;
+			buildConfigurationList = 223807591744F1FD0057E044 /* Build configuration list for PBXProject "KSFTPDirectoryParser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -374,7 +373,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Source";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -401,7 +400,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Source";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
@@ -415,8 +414,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
-				INFOPLIST_FILE = "KSFTPParser/KSFTPParser-Info.plist";
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				INFOPLIST_FILE = Source/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = framework;
@@ -431,8 +430,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
-				INFOPLIST_FILE = "KSFTPParser/KSFTPParser-Info.plist";
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				INFOPLIST_FILE = Source/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = framework;
@@ -445,8 +444,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
-				INFOPLIST_FILE = "KSFTPParserTests/KSFTPParserTests-Info.plist";
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -458,8 +457,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KSFTPParser/KSFTPParser-Prefix.pch";
-				INFOPLIST_FILE = "KSFTPParserTests/KSFTPParserTests-Info.plist";
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -468,7 +467,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		223807591744F1FD0057E044 /* Build configuration list for PBXProject "KSFTPParser" */ = {
+		223807591744F1FD0057E044 /* Build configuration list for PBXProject "KSFTPDirectoryParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				223807871744F1FE0057E044 /* Debug */,
