@@ -22,6 +22,17 @@ String::String(const char* bytes, int64_t length)
     string = [[NSString alloc] initWithBytes:bytes length:length encoding:NSASCIIStringEncoding];
 }
 
+String::String(const String& string) : string([string.string retain])
+{
+}
+
+String& String::operator=( const String& rhs )
+{
+    string = [rhs.string retain];
+
+    return *this;
+}
+
 String::~String()
 {
     [string release];
@@ -29,6 +40,8 @@ String::~String()
 
 void String::truncate(int64_t length)
 {
+    ASSERT(length == 0); // only implemented for length 0
+
     [string release];
     string = nil;
 }
