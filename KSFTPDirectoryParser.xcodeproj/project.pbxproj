@@ -72,7 +72,7 @@
 		2238076A1744F1FD0057E044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2238076C1744F1FD0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2238076E1744F1FD0057E044 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		223807771744F1FE0057E044 /* KSFTPParserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KSFTPParserTests.octest; path = KSFTPDirectoryParserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		223807771744F1FE0057E044 /* KSFTPParserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KSFTPParserTests.octest; path = "UnitTests Mac.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223807781744F1FE0057E044 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		223807801744F1FE0057E044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223807821744F1FE0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -292,9 +292,9 @@
 			productReference = 223807771744F1FE0057E044 /* KSFTPParserTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		22380822174547A00057E044 /* Library IOS */ = {
+		22380822174547A00057E044 /* Library iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22380842174547A00057E044 /* Build configuration list for PBXNativeTarget "Library IOS" */;
+			buildConfigurationList = 22380842174547A00057E044 /* Build configuration list for PBXNativeTarget "Library iOS" */;
 			buildPhases = (
 				2238081F174547A00057E044 /* Sources */,
 				22380820174547A00057E044 /* Frameworks */,
@@ -304,14 +304,14 @@
 			);
 			dependencies = (
 			);
-			name = "Library IOS";
+			name = "Library iOS";
 			productName = "KSFTPDirectoryParser iOS";
 			productReference = 22380823174547A00057E044 /* libLibrary IOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		22380830174547A00057E044 /* UnitTests IOS */ = {
+		22380830174547A00057E044 /* UnitTests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22380845174547A00057E044 /* Build configuration list for PBXNativeTarget "UnitTests IOS" */;
+			buildConfigurationList = 22380845174547A00057E044 /* Build configuration list for PBXNativeTarget "UnitTests iOS" */;
 			buildPhases = (
 				2238082C174547A00057E044 /* Sources */,
 				2238082D174547A00057E044 /* Frameworks */,
@@ -323,7 +323,7 @@
 			dependencies = (
 				22380837174547A00057E044 /* PBXTargetDependency */,
 			);
-			name = "UnitTests IOS";
+			name = "UnitTests iOS";
 			productName = "KSFTPDirectoryParser iOSTests";
 			productReference = 22380831174547A00057E044 /* UnitTests IOS.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -351,8 +351,8 @@
 			targets = (
 				2238075E1744F1FD0057E044 /* Framework Mac */,
 				223807761744F1FD0057E044 /* UnitTests Mac */,
-				22380822174547A00057E044 /* Library IOS */,
-				22380830174547A00057E044 /* UnitTests IOS */,
+				22380822174547A00057E044 /* Library iOS */,
+				22380830174547A00057E044 /* UnitTests iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -461,7 +461,7 @@
 		};
 		22380837174547A00057E044 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 22380822174547A00057E044 /* Library IOS */;
+			target = 22380822174547A00057E044 /* Library iOS */;
 			targetProxy = 22380836174547A00057E044 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -697,21 +697,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22380842174547A00057E044 /* Build configuration list for PBXNativeTarget "Library IOS" */ = {
+		22380842174547A00057E044 /* Build configuration list for PBXNativeTarget "Library iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22380843174547A00057E044 /* Debug */,
 				22380844174547A00057E044 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		22380845174547A00057E044 /* Build configuration list for PBXNativeTarget "UnitTests IOS" */ = {
+		22380845174547A00057E044 /* Build configuration list for PBXNativeTarget "UnitTests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22380846174547A00057E044 /* Debug */,
 				22380847174547A00057E044 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
