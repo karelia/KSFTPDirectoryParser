@@ -19,7 +19,7 @@ String::String(NSString* string) : string(string)
 
 String::String(const char* bytes, int64_t length)
 {
-    string = [[NSString alloc] initWithBytes:bytes length:length encoding:NSASCIIStringEncoding];
+    string = [[NSString alloc] initWithBytes:bytes length:length encoding:NSUTF8StringEncoding];
 }
 
 String::String(const String& string) : string([string.string retain])
