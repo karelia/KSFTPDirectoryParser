@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2238075E1744F1FD0057E044"
-               BuildableName = "KSFTPDirectoryParser.framework"
+               BuildableName = "Framework Mac.framework"
                BlueprintName = "Framework Mac"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "223807761744F1FD0057E044"
-               BuildableName = "KSFTPDirectoryParserTests.octest"
+               BuildableName = "UnitTests Mac.octest"
                BlueprintName = "UnitTests Mac"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "223807761744F1FD0057E044"
-               BuildableName = "KSFTPDirectoryParserTests.octest"
+               BuildableName = "UnitTests Mac.octest"
                BlueprintName = "UnitTests Mac"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
