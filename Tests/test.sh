@@ -30,7 +30,7 @@ testMac()
 		cd "$build"
         rm -rf test-reports
 		"../$ocunit2junit" < "$testout"
-        mv test-reports mac-reports
+        mv test-reports mac-reports-$1
 		cd ..
 	fi
 }
@@ -60,7 +60,8 @@ testIOS
 
 cd "$build"
 mkdir test-reports
-mv mac-reports test-reports/
+mv mac-reports-i386 test-reports/
+mv mac-reports-x86_64 test-reports/
 mv ios-reports test-reports/
 
 
