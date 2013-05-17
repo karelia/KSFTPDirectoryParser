@@ -28,8 +28,8 @@
     {
         for (NSUInteger n = 0; ok && (n < count); ++n)
         {
-            NSDictionary* item = items[n];
-            KSFTPEntryType type = (KSFTPEntryType) [item[@"type"] integerValue];
+            NSDictionary* item = [items objectAtIndex:n];
+            KSFTPEntryType type = (KSFTPEntryType) [[item objectForKey:@"type"] integerValue];
             ok = type == types[n];
             if (!ok)
             {
@@ -38,17 +38,18 @@
 
             if (ok)
             {
-                NSString* name = item[@"name"];
-                ok = [name isEqualToString:names[n]];
+                NSString* name = [item objectForKey:@"name"];
+                NSString* expectedName = [names objectAtIndex:n];
+                ok = [name isEqualToString:expectedName];
                 if (!ok)
                 {
-                    NSLog(@"expected name %@ got %@", names[n], name);
+                    NSLog(@"expected name %@ got %@", expectedName, name);
                 }
             }
 
             if (ok)
             {
-                NSDate* time = item[@"modified"];
+                NSDate* time = [item objectForKey:@"modified"];
                 NSUInteger flags = (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit);
                 NSDateComponents* components = [calendar components:flags fromDate:time];
                 ok = ((components.year == 1969) || (components.year == 2069)) // 2-digit dates are interpreted as 2000 if < 80, 1900 if >= 80
@@ -77,7 +78,7 @@
     STAssertEquals([items count], (NSUInteger)3, @"expected 3 results, got %ld", [items count]);
     for (NSDictionary* item in items)
     {
-        KSFTPEntryType type = (KSFTPEntryType) [item[@"type"] integerValue];
+        KSFTPEntryType type = (KSFTPEntryType) [[item objectForKey:@"type"] integerValue];
         STAssertEquals(type, KSFTPMiscEntry, @"expected type 3, got %ld", type);
     }
     
