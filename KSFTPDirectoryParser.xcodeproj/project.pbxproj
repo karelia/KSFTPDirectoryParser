@@ -72,7 +72,7 @@
 		2238076A1744F1FD0057E044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2238076C1744F1FD0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2238076E1744F1FD0057E044 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		223807771744F1FE0057E044 /* KSFTPParserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KSFTPParserTests.octest; path = "UnitTests Mac.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		223807771744F1FE0057E044 /* UnitTests Mac.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests Mac.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223807781744F1FE0057E044 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		223807801744F1FE0057E044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223807821744F1FE0057E044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		223807A91744FC760057E044 /* KSFTPDirectoryParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSFTPDirectoryParser.mm; sourceTree = "<group>"; };
 		22380813174547870057E044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22380823174547A00057E044 /* libLibrary iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLibrary iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		22380831174547A00057E044 /* UnitTests IOS.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "UnitTests IOS.octest"; path = "UnitTests iOS.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22380831174547A00057E044 /* UnitTests iOS.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests iOS.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22380833174547A00057E044 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -147,9 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				2238075F1744F1FD0057E044 /* Framework Mac.framework */,
-				223807771744F1FE0057E044 /* KSFTPParserTests.octest */,
+				223807771744F1FE0057E044 /* UnitTests Mac.octest */,
 				22380823174547A00057E044 /* libLibrary iOS.a */,
-				22380831174547A00057E044 /* UnitTests IOS.octest */,
+				22380831174547A00057E044 /* UnitTests iOS.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 			);
 			name = "UnitTests Mac";
 			productName = KSFTPParserTests;
-			productReference = 223807771744F1FE0057E044 /* KSFTPParserTests.octest */;
+			productReference = 223807771744F1FE0057E044 /* UnitTests Mac.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 		22380822174547A00057E044 /* Library iOS */ = {
@@ -325,7 +325,7 @@
 			);
 			name = "UnitTests iOS";
 			productName = "KSFTPDirectoryParser iOSTests";
-			productReference = 22380831174547A00057E044 /* UnitTests IOS.octest */;
+			productReference = 22380831174547A00057E044 /* UnitTests iOS.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
