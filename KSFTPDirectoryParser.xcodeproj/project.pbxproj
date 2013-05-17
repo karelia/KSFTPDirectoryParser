@@ -26,7 +26,7 @@
 		22380832174547A00057E044 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223807781744F1FE0057E044 /* SenTestingKit.framework */; };
 		22380834174547A00057E044 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22380833174547A00057E044 /* UIKit.framework */; };
 		22380835174547A00057E044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22380813174547870057E044 /* Foundation.framework */; };
-		22380838174547A00057E044 /* libLibrary IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22380823174547A00057E044 /* libLibrary IOS.a */; };
+		22380838174547A00057E044 /* libLibrary iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22380823174547A00057E044 /* libLibrary iOS.a */; };
 		22380848174547B10057E044 /* KSFTPDirectoryParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807A91744FC760057E044 /* KSFTPDirectoryParser.mm */; };
 		22380849174547B10057E044 /* FTPDirectoryParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2238079C1744F3BD0057E044 /* FTPDirectoryParser.mm */; };
 		2238084A174548710057E044 /* FTPDirectoryParserTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807841744F1FE0057E044 /* FTPDirectoryParserTests.mm */; };
@@ -87,8 +87,8 @@
 		223807A81744FC760057E044 /* KSFTPDirectoryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFTPDirectoryParser.h; sourceTree = "<group>"; };
 		223807A91744FC760057E044 /* KSFTPDirectoryParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KSFTPDirectoryParser.mm; sourceTree = "<group>"; };
 		22380813174547870057E044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		22380823174547A00057E044 /* libLibrary IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLibrary IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		22380831174547A00057E044 /* UnitTests IOS.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests IOS.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22380823174547A00057E044 /* libLibrary iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLibrary iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22380831174547A00057E044 /* UnitTests IOS.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "UnitTests IOS.octest"; path = "UnitTests iOS.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22380833174547A00057E044 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 				22380832174547A00057E044 /* SenTestingKit.framework in Frameworks */,
 				22380834174547A00057E044 /* UIKit.framework in Frameworks */,
 				22380835174547A00057E044 /* Foundation.framework in Frameworks */,
-				22380838174547A00057E044 /* libLibrary IOS.a in Frameworks */,
+				22380838174547A00057E044 /* libLibrary iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +148,7 @@
 			children = (
 				2238075F1744F1FD0057E044 /* Framework Mac.framework */,
 				223807771744F1FE0057E044 /* KSFTPParserTests.octest */,
-				22380823174547A00057E044 /* libLibrary IOS.a */,
+				22380823174547A00057E044 /* libLibrary iOS.a */,
 				22380831174547A00057E044 /* UnitTests IOS.octest */,
 			);
 			name = Products;
@@ -306,7 +306,7 @@
 			);
 			name = "Library iOS";
 			productName = "KSFTPDirectoryParser iOS";
-			productReference = 22380823174547A00057E044 /* libLibrary IOS.a */;
+			productReference = 22380823174547A00057E044 /* libLibrary iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		22380830174547A00057E044 /* UnitTests iOS */ = {
