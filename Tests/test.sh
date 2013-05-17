@@ -19,8 +19,10 @@ mkdir -p "$build"
 
 testMac()
 {
-	echo "Testing Mac"
-	xcodebuild -workspace "KSFTPDirectoryParser.xcworkspace" -scheme "KSFTPDirectoryParser Mac" -sdk "macosx" -config "Debug" test OBJROOT="$obj" SYMROOT="$sym" > "$testout" 2> "$testerr"
+	arch=$1
+	
+	echo "Testing Mac $1"
+	xcodebuild -workspace "KSFTPDirectoryParser.xcworkspace" -scheme "KSFTPDirectoryParser Mac" -sdk "macosx" -config "Debug" -arch "$arch" test OBJROOT="$obj" SYMROOT="$sym" > "$testout" 2> "$testerr"
 	if [ $? != 0 ]; then
 		echo "Mac build failed"
 		cat "$testerr"
@@ -52,7 +54,8 @@ testIOS()
 }
 
 
-testMac
+testMac i386
+testMac x86_64
 testIOS
 
 cd "$build"
