@@ -23,9 +23,3 @@ typedef NS_ENUM(NSUInteger, KSFTPEntryType)
 + (NSArray*)parseString:(NSString*)string includingExtraEntries:(BOOL)includingExtraEntries;
 
 @end
-
-@protocol KSFTPLineParser <NSObject>
-
-- (NSDictionary*)parseLine:(NSString*)line includingExtraEntries:(BOOL)includingExtraEntries;
-
-@end

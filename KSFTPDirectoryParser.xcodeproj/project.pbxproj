@@ -33,15 +33,15 @@
 		2238084B174548710057E044 /* KSFTPDirectoryParserTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807851744F1FE0057E044 /* KSFTPDirectoryParserTests.mm */; };
 		2238084C174548BE0057E044 /* WTFString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807961744F3450057E044 /* WTFString.mm */; };
 		2273A0571754C69600F9C2DC /* ftpparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0551754C69600F9C2DC /* ftpparse.c */; };
-		2273A0581754C69600F9C2DC /* ftpparse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2273A0561754C69600F9C2DC /* ftpparse.h */; };
 		2273A05A1754C72F00F9C2DC /* ftpparseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0591754C72F00F9C2DC /* ftpparseTests.m */; };
 		2273A05D1754D83900F9C2DC /* FTPDirectoryParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2273A05B1754D83900F9C2DC /* FTPDirectoryParser.h */; };
 		2273A05E1754D83900F9C2DC /* FTPDirectoryParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2273A05C1754D83900F9C2DC /* FTPDirectoryParser.mm */; };
 		2273A05F1754D83900F9C2DC /* FTPDirectoryParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2273A05C1754D83900F9C2DC /* FTPDirectoryParser.mm */; };
 		2273A0621754DBAD00F9C2DC /* FTPParseLineParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2273A0601754DBAC00F9C2DC /* FTPParseLineParser.h */; };
-		2273A0631754DBAD00F9C2DC /* FTPParseLineParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0611754DBAC00F9C2DC /* FTPParseLineParser.mm */; };
-		2273A0641754DBAD00F9C2DC /* FTPParseLineParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0611754DBAC00F9C2DC /* FTPParseLineParser.mm */; };
+		2273A0631754DBAD00F9C2DC /* FTPParseLineParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0611754DBAC00F9C2DC /* FTPParseLineParser.m */; };
+		2273A0641754DBAD00F9C2DC /* FTPParseLineParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0611754DBAC00F9C2DC /* FTPParseLineParser.m */; };
 		2273A0651754DEB700F9C2DC /* ftpparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0551754C69600F9C2DC /* ftpparse.c */; };
+		2273A0681754DF3E00F9C2DC /* KSFTPLineParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2273A0671754DF3E00F9C2DC /* KSFTPLineParser.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +106,8 @@
 		2273A05B1754D83900F9C2DC /* FTPDirectoryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPDirectoryParser.h; sourceTree = "<group>"; };
 		2273A05C1754D83900F9C2DC /* FTPDirectoryParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FTPDirectoryParser.mm; sourceTree = "<group>"; };
 		2273A0601754DBAC00F9C2DC /* FTPParseLineParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPParseLineParser.h; sourceTree = "<group>"; };
-		2273A0611754DBAC00F9C2DC /* FTPParseLineParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FTPParseLineParser.mm; sourceTree = "<group>"; };
+		2273A0611754DBAC00F9C2DC /* FTPParseLineParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPParseLineParser.m; sourceTree = "<group>"; };
+		2273A0671754DF3E00F9C2DC /* KSFTPLineParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFTPLineParser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,18 +197,14 @@
 		223807681744F1FD0057E044 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				223807A81744FC760057E044 /* KSFTPDirectoryParser.h */,
-				223807A91744FC760057E044 /* KSFTPDirectoryParser.m */,
 				2238079B1744F3BD0057E044 /* FTPDirectoryParserLineParser.h */,
 				2238079C1744F3BD0057E044 /* FTPDirectoryParserLineParser.mm */,
 				2273A0601754DBAC00F9C2DC /* FTPParseLineParser.h */,
-				2273A0611754DBAC00F9C2DC /* FTPParseLineParser.mm */,
-				2273A05B1754D83900F9C2DC /* FTPDirectoryParser.h */,
-				2273A05C1754D83900F9C2DC /* FTPDirectoryParser.mm */,
-				2273A0561754C69600F9C2DC /* ftpparse.h */,
-				2273A0551754C69600F9C2DC /* ftpparse.c */,
-				223807A31744F5AC0057E044 /* Compatibility.h */,
-				223807931744F3450057E044 /* wtf */,
+				2273A0611754DBAC00F9C2DC /* FTPParseLineParser.m */,
+				223807A81744FC760057E044 /* KSFTPDirectoryParser.h */,
+				223807A91744FC760057E044 /* KSFTPDirectoryParser.m */,
+				2273A0671754DF3E00F9C2DC /* KSFTPLineParser.h */,
+				2273A0661754DF1800F9C2DC /* Implementations */,
 				223807691744F1FD0057E044 /* Supporting Files */,
 			);
 			path = Source;
@@ -261,6 +258,19 @@
 			path = text;
 			sourceTree = "<group>";
 		};
+		2273A0661754DF1800F9C2DC /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				223807A31744F5AC0057E044 /* Compatibility.h */,
+				223807931744F3450057E044 /* wtf */,
+				2273A05B1754D83900F9C2DC /* FTPDirectoryParser.h */,
+				2273A05C1754D83900F9C2DC /* FTPDirectoryParser.mm */,
+				2273A0561754C69600F9C2DC /* ftpparse.h */,
+				2273A0551754C69600F9C2DC /* ftpparse.c */,
+			);
+			name = Implementations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -273,9 +283,9 @@
 				2238079D1744F3BD0057E044 /* FTPDirectoryParserLineParser.h in Headers */,
 				223807A41744F5AD0057E044 /* Compatibility.h in Headers */,
 				223807AA1744FC760057E044 /* KSFTPDirectoryParser.h in Headers */,
-				2273A0581754C69600F9C2DC /* ftpparse.h in Headers */,
 				2273A05D1754D83900F9C2DC /* FTPDirectoryParser.h in Headers */,
 				2273A0621754DBAD00F9C2DC /* FTPParseLineParser.h in Headers */,
+				2273A0681754DF3E00F9C2DC /* KSFTPLineParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +461,7 @@
 				223807AB1744FC760057E044 /* KSFTPDirectoryParser.m in Sources */,
 				2273A0571754C69600F9C2DC /* ftpparse.c in Sources */,
 				2273A05E1754D83900F9C2DC /* FTPDirectoryParser.mm in Sources */,
-				2273A0631754DBAD00F9C2DC /* FTPParseLineParser.mm in Sources */,
+				2273A0631754DBAD00F9C2DC /* FTPParseLineParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +482,7 @@
 				22380849174547B10057E044 /* FTPDirectoryParserLineParser.mm in Sources */,
 				2238084C174548BE0057E044 /* WTFString.mm in Sources */,
 				2273A05F1754D83900F9C2DC /* FTPDirectoryParser.mm in Sources */,
-				2273A0641754DBAD00F9C2DC /* FTPParseLineParser.mm in Sources */,
+				2273A0641754DBAD00F9C2DC /* FTPParseLineParser.m in Sources */,
 				2273A0651754DEB700F9C2DC /* ftpparse.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

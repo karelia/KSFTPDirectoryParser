@@ -6,7 +6,7 @@
 //
 //
 
-#import "KSFTPDirectoryParser.h"
+#import "KSFTPLineParser.h"
 
 @interface FTPParseLineParser : NSObject <KSFTPLineParser>
 
