@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2238075E1744F1FD0057E044"
-               BuildableName = "Framework Mac.framework"
+               BuildableName = "KSFTPDirectoryParser.framework"
                BlueprintName = "Framework Mac"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
@@ -51,6 +51,11 @@
                BlueprintName = "UnitTests Mac"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "KSFTPDirectoryParserTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
