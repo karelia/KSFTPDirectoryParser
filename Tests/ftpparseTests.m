@@ -93,24 +93,5 @@
     
 }
 
-
-#if 0
-
-
-
-
-- (void)testUnix
-{
-    NSString* input = @"total 1"
-    "drw-------   1 user  staff     3 Nov  12  1969 directory"
-    "-rw-------   1 user  staff     3 Nov  12  1969 file1.txt"
-    "-rw-------   1 user  staff     3 Nov  12  1969 file2.txt\r\n";
-
-    NSArray* items = [KSFTPDirectoryParser parseString:input includingExtraEntries:NO];
-    STAssertTrue([self checkItems:items], @"unexpected output: %@", items);
-}
-
-#endif
-
 @end
 
