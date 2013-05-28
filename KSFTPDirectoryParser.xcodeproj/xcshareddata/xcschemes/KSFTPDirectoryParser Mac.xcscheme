@@ -51,6 +51,11 @@
                BlueprintName = "UnitTests Mac"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "KSFTPDirectoryParserTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

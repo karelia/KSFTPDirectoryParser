@@ -9,11 +9,11 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "ftpparse.h"
 
-@interface FTPDirectoryParserTests : SenTestCase
+@interface ftpParseTests : SenTestCase
 
 @end
 
-@implementation FTPDirectoryParserTests
+@implementation ftpParseTests
 
 - (void)testJunk
 {

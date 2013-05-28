@@ -15,33 +15,32 @@
 
 @implementation KSFTPDirectoryParser
 
-+ (NSArray*)parseData:(NSData*)data includingExtraEntries:(BOOL)includingExtraEntries
++ (NSArray*)parseData:(NSData*)data parser:(id<KSFTPLineParser>)parser includingExtraEntries:(BOOL)includingExtraEntries
 {
     NSString* string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
-    NSArray* result = [self parseString:string includingExtraEntries:includingExtraEntries];
+    NSArray* result = [self parseString:string parser:parser includingExtraEntries:includingExtraEntries];
 
     [string release];
 
     return result;
 }
 
-+ (NSArray*)parseString:(NSString*)string includingExtraEntries:(BOOL)includingExtraEntries
++ (NSArray*)parseString:(NSString*)string parser:(id<KSFTPLineParser>)parser includingExtraEntries:(BOOL)includingExtraEntries
 {
-    FTPDirectoryParserLineParser* parser = [[FTPDirectoryParserLineParser alloc] init];
     NSMutableArray* results = [NSMutableArray array];
     NSArray* lines = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 
+    NSCharacterSet* set = [NSCharacterSet newlineCharacterSet];
     for (NSString* line in lines)
     {
-        NSDictionary* info = [parser parseLine:line includingExtraEntries:includingExtraEntries];
+        NSString* stripped = [line stringByTrimmingCharactersInSet:set];
+        NSDictionary* info = [parser parseLine:stripped includingExtraEntries:includingExtraEntries];
         if (info)
         {
             [results addObject:info];
         }
     }
-
-    [parser release];
 
     return results;
 }

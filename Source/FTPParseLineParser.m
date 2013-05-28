@@ -1,4 +1,5 @@
 #import "FTPParseLineParser.h"
+#import "KSFTPDirectoryParser.h"
 #import "ftpparse.h"
 
 @interface FTPParseLineParser()
@@ -30,6 +31,7 @@
 
         NSString* name = [[NSString alloc] initWithUTF8String:info.name];
         result = @{
+                   @"type" : info.flagtrycwd ? @(KSFTPDirectoryEntry) : @(KSFTPFileEntry),
                    @"name" : name,
                    @"size": @(info.size),
                    @"modified" : date
