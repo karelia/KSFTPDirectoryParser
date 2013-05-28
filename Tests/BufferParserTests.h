@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface KSFTPDirectoryParserTests : SenTestCase
+@interface BufferParserTests : SenTestCase
 
 @end

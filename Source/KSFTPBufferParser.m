@@ -6,14 +6,14 @@
 //
 //
 
-#import "KSFTPDirectoryParser.h"
+#import "KSFTPBufferParser.h"
 #import "FTPDirectoryParserLineParser.h"
 
-@interface KSFTPDirectoryParser()
+@interface KSFTPBufferParser()
 
 @end
 
-@implementation KSFTPDirectoryParser
+@implementation KSFTPBufferParser
 
 + (NSArray*)parseData:(NSData*)data parser:(id<KSFTPLineParser>)parser includingExtraEntries:(BOOL)includingExtraEntries
 {

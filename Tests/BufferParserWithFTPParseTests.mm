@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Karelia. All rights reserved.
 //
 
-#import "KSFTPDirectoryParserTests.h"
+#import "BufferParserTests.h"
 #import "FTPParseLineParser.h"
 
-@interface KSFTPDirectoryParserWithFTPParseTests : KSFTPDirectoryParserTests
+@interface BufferParserWithFTPParseTests : BufferParserTests
 
 @end
 
-@implementation KSFTPDirectoryParserWithFTPParseTests
+@implementation BufferParserWithFTPParseTests
 
 - (id<KSFTPLineParser>)newParser
 {

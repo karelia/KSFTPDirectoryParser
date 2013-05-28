@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Karelia. All rights reserved.
 //
 
-#import "KSFTPDirectoryParserTests.h"
+#import "BufferParserTests.h"
 #import "FTPDirectoryParserLineParser.h"
 #import "KSFTPDirectoryParser.h"
 
-@interface KSFTPDirectoryParserWithFTPDirectoryParserTests : KSFTPDirectoryParserTests
+@interface BufferParserWithFTPDirectoryParserTests : BufferParserTests
 
 @end
 
-@implementation KSFTPDirectoryParserWithFTPDirectoryParserTests
+@implementation BufferParserWithFTPDirectoryParserTests
 
 - (id<KSFTPLineParser>)newParser
 {
@@ -29,7 +29,7 @@
     id<KSFTPLineParser> parser = [self newParser];
     if (parser)
     {
-        NSArray* items = [KSFTPDirectoryParser parseString:input parser:parser includingExtraEntries:YES];
+        NSArray* items = [KSFTPBufferParser parseString:input parser:parser includingExtraEntries:YES];
 
         STAssertEquals([items count], (NSUInteger)3, @"expected 3 results, got %ld", [items count]);
         for (NSDictionary* item in items)
