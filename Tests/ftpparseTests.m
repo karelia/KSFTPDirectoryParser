@@ -17,7 +17,7 @@
 
 - (void)testJunk
 {
-    const char* input = "This is a test";
+    const char* input = "total 1"; // typical clutter at the beginning of a unix-style listing
 
     struct ftpparse info;
     memset(&info, 0, sizeof(info));
@@ -29,7 +29,7 @@
 
 - (void)testDOSFile
 {
-    const char* input = "11-12-69  03:04AM                7352 file1.txt\r\n";
+    const char* input = "11-12-69  03:04AM                7352 file1.txt";
 
     struct ftpparse info;
     memset(&info, 0, sizeof(info));
@@ -37,7 +37,7 @@
     int result = ftpparse(&info, (char*)input, strlen(input));
 
     STAssertEquals(result, 1, @"expected to find a filename");
-    STAssertTrue(strcmp(info.name, "file1.txt\r\n") == 0, @"unexpected name %s", info.name);
+    STAssertTrue(strcmp(info.name, "file1.txt") == 0, @"unexpected name %s", info.name);
     STAssertEquals(info.mtimetype, FTPPARSE_MTIME_REMOTEMINUTE, @"unexpected time type %d", info.mtimetype);
     STAssertEquals(info.mtime, (time_t) -4308960, @"expected time value %d", info.mtime);
     STAssertEquals(info.sizetype, FTPPARSE_SIZE_BINARY, @"expected size type %d", info.sizetype);
@@ -46,7 +46,7 @@
 
 - (void)testDOSDirectory
 {
-    const char* input = "11-12-69  01:02PM      <DIR>          directory\r\n";
+    const char* input = "11-12-69  01:02PM      <DIR>          directory";
 
     struct ftpparse info;
     memset(&info, 0, sizeof(info));
@@ -54,22 +54,57 @@
     int result = ftpparse(&info, (char*)input, strlen(input));
 
     STAssertEquals(result, 1, @"expected to find a filename");
-    STAssertTrue(strcmp(info.name, "directory\r\n") == 0, @"unexpected name %s", info.name);
+    STAssertTrue(strcmp(info.name, "directory") == 0, @"unexpected name %s", info.name);
     STAssertEquals(info.mtimetype, FTPPARSE_MTIME_REMOTEMINUTE, @"unexpected time type %d", info.mtimetype);
     STAssertEquals(info.mtime, (time_t) -4273080, @"expected time value %d", info.mtime);
 
 }
 
+- (void)testUnixFile
+{
+    const char* input = "-rw-------   1 ftptest  staff  2774 Apr 25 02:16 file2.txt";
+
+    struct ftpparse info;
+    memset(&info, 0, sizeof(info));
+
+    int result = ftpparse(&info, (char*)input, strlen(input));
+
+    STAssertEquals(result, 1, @"expected to find a filename");
+    STAssertTrue(strcmp(info.name, "file2.txt") == 0, @"unexpected name %s", info.name);
+    STAssertEquals(info.mtimetype, FTPPARSE_MTIME_REMOTEMINUTE, @"unexpected time type %d", info.mtimetype);
+    STAssertEquals(info.mtime, (time_t) 1366856160, @"expected time value %d", info.mtime);
+    STAssertEquals(info.sizetype, FTPPARSE_SIZE_BINARY, @"expected size type %d", info.sizetype);
+    STAssertEquals(info.size, 2774L, @"expected size %d", info.size);
+}
+
+- (void)testUnixDirectory
+{
+    const char* input = "drwx------   3 ftptest  staff   102 Apr  9 14:54 directory";
+
+    struct ftpparse info;
+    memset(&info, 0, sizeof(info));
+
+    int result = ftpparse(&info, (char*)input, strlen(input));
+
+    STAssertEquals(result, 1, @"expected to find a filename");
+    STAssertTrue(strcmp(info.name, "directory") == 0, @"unexpected name %s", info.name);
+    STAssertEquals(info.mtimetype, FTPPARSE_MTIME_REMOTEMINUTE, @"unexpected time type %d", info.mtimetype);
+    STAssertEquals(info.mtime, (time_t) 1365519240, @"expected time value %d", info.mtime);
+    
+}
 
 
 #if 0
 
+
+
+
 - (void)testUnix
 {
-    NSString* input = @"total 1\r\n"
-    "drw-------   1 user  staff     3 Nov  12  1969 directory\r\n"
-    "-rw-------   1 user  staff     3 Nov  12  1969 file1.txt\r\n"
-    "-rw-------   1 user  staff     3 Nov  12  1969 file2.txt\r\n\r\n";
+    NSString* input = @"total 1"
+    "drw-------   1 user  staff     3 Nov  12  1969 directory"
+    "-rw-------   1 user  staff     3 Nov  12  1969 file1.txt"
+    "-rw-------   1 user  staff     3 Nov  12  1969 file2.txt\r\n";
 
     NSArray* items = [KSFTPDirectoryParser parseString:input includingExtraEntries:NO];
     STAssertTrue([self checkItems:items], @"unexpected output: %@", items);
