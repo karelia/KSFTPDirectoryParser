@@ -42,6 +42,14 @@
     STAssertEquals(info.mtime, (time_t) -4308960, @"expected time value %d", info.mtime);
     STAssertEquals(info.sizetype, FTPPARSE_SIZE_BINARY, @"expected size type %d", info.sizetype);
     STAssertEquals(info.size, 7352L, @"expected size %d", info.size);
+
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:info.mtime];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:date];
+
+    STAssertEquals(components.year, (NSInteger)1969, @"unexpected year %d", components.year);
+    STAssertEquals(components.month, (NSInteger)11, @"unexpected month %d", components.month);
+    STAssertEquals(components.day, (NSInteger)12, @"unexpected day %d", components.day);
 }
 
 - (void)testDOSDirectory
@@ -58,11 +66,18 @@
     STAssertEquals(info.mtimetype, FTPPARSE_MTIME_REMOTEMINUTE, @"unexpected time type %d", info.mtimetype);
     STAssertEquals(info.mtime, (time_t) -4273080, @"expected time value %d", info.mtime);
 
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:info.mtime];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:date];
+
+    STAssertEquals(components.year, (NSInteger)1969, @"unexpected year %d", components.year);
+    STAssertEquals(components.month, (NSInteger)11, @"unexpected month %d", components.month);
+    STAssertEquals(components.day, (NSInteger)12, @"unexpected day %d", components.day);
 }
 
 - (void)testUnixFile
 {
-    const char* input = "-rw-------   1 ftptest  staff  2774 Apr 25 02:16 file2.txt";
+    const char* input = "-rw-------   1 ftptest  staff  2774 Nov 12 02:16 file2.txt";
 
     struct ftpparse info;
     memset(&info, 0, sizeof(info));
@@ -72,14 +87,21 @@
     STAssertEquals(result, 1, @"expected to find a filename");
     STAssertTrue(strcmp(info.name, "file2.txt") == 0, @"unexpected name %s", info.name);
     STAssertEquals(info.mtimetype, FTPPARSE_MTIME_REMOTEMINUTE, @"unexpected time type %d", info.mtimetype);
-    STAssertEquals(info.mtime, (time_t) 1366856160, @"expected time value %d", info.mtime);
+    STAssertEquals(info.mtime, (time_t) 1352686560, @"unexpected time value %d", info.mtime);
     STAssertEquals(info.sizetype, FTPPARSE_SIZE_BINARY, @"expected size type %d", info.sizetype);
     STAssertEquals(info.size, 2774L, @"expected size %d", info.size);
+
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:info.mtime];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSMonthCalendarUnit | NSDayCalendarUnit fromDate:date];
+
+    STAssertEquals(components.month, (NSInteger)11, @"unexpected month %d", components.month);
+    STAssertEquals(components.day, (NSInteger)12, @"unexpected day %d", components.day);
 }
 
 - (void)testUnixDirectory
 {
-    const char* input = "drwx------   3 ftptest  staff   102 Apr  9 14:54 directory";
+    const char* input = "drwx------   3 ftptest  staff   102 Nov  12 14:54 directory";
 
     struct ftpparse info;
     memset(&info, 0, sizeof(info));
@@ -89,8 +111,14 @@
     STAssertEquals(result, 1, @"expected to find a filename");
     STAssertTrue(strcmp(info.name, "directory") == 0, @"unexpected name %s", info.name);
     STAssertEquals(info.mtimetype, FTPPARSE_MTIME_REMOTEMINUTE, @"unexpected time type %d", info.mtimetype);
-    STAssertEquals(info.mtime, (time_t) 1365519240, @"expected time value %d", info.mtime);
-    
+    STAssertEquals(info.mtime, (time_t) 1352732040, @"unexpected time value %d", info.mtime);
+
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:info.mtime];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSMonthCalendarUnit | NSDayCalendarUnit fromDate:date];
+
+    STAssertEquals(components.month, (NSInteger)11, @"unexpected month %d", components.month);
+    STAssertEquals(components.day, (NSInteger)12, @"unexpected day %d", components.day);
 }
 
 @end
