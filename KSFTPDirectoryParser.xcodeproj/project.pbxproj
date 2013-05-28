@@ -32,6 +32,9 @@
 		2238084A174548710057E044 /* FTPDirectoryParserTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807841744F1FE0057E044 /* FTPDirectoryParserTests.mm */; };
 		2238084B174548710057E044 /* KSFTPDirectoryParserTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807851744F1FE0057E044 /* KSFTPDirectoryParserTests.mm */; };
 		2238084C174548BE0057E044 /* WTFString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223807961744F3450057E044 /* WTFString.mm */; };
+		2273A0571754C69600F9C2DC /* ftpparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0551754C69600F9C2DC /* ftpparse.c */; };
+		2273A0581754C69600F9C2DC /* ftpparse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2273A0561754C69600F9C2DC /* ftpparse.h */; };
+		2273A05A1754C72F00F9C2DC /* ftpparseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273A0591754C72F00F9C2DC /* ftpparseTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,9 @@
 		22380823174547A00057E044 /* libKSFTPDirectoryParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKSFTPDirectoryParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		22380831174547A00057E044 /* UnitTests iOS.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests iOS.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22380833174547A00057E044 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2273A0551754C69600F9C2DC /* ftpparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ftpparse.c; sourceTree = "<group>"; };
+		2273A0561754C69600F9C2DC /* ftpparse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftpparse.h; sourceTree = "<group>"; };
+		2273A0591754C72F00F9C2DC /* ftpparseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ftpparseTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,8 @@
 				223807A91744FC760057E044 /* KSFTPDirectoryParser.mm */,
 				2238079B1744F3BD0057E044 /* FTPDirectoryParser.h */,
 				2238079C1744F3BD0057E044 /* FTPDirectoryParser.mm */,
+				2273A0561754C69600F9C2DC /* ftpparse.h */,
+				2273A0551754C69600F9C2DC /* ftpparse.c */,
 				223807A31744F5AC0057E044 /* Compatibility.h */,
 				223807931744F3450057E044 /* wtf */,
 				223807691744F1FD0057E044 /* Supporting Files */,
@@ -203,6 +211,7 @@
 		2238077E1744F1FE0057E044 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2273A0591754C72F00F9C2DC /* ftpparseTests.m */,
 				223807841744F1FE0057E044 /* FTPDirectoryParserTests.mm */,
 				223807851744F1FE0057E044 /* KSFTPDirectoryParserTests.mm */,
 				2238077F1744F1FE0057E044 /* Supporting Files */,
@@ -249,6 +258,7 @@
 				2238079D1744F3BD0057E044 /* FTPDirectoryParser.h in Headers */,
 				223807A41744F5AD0057E044 /* Compatibility.h in Headers */,
 				223807AA1744FC760057E044 /* KSFTPDirectoryParser.h in Headers */,
+				2273A0581754C69600F9C2DC /* ftpparse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +432,7 @@
 				223807991744F3450057E044 /* WTFString.mm in Sources */,
 				2238079E1744F3BD0057E044 /* FTPDirectoryParser.mm in Sources */,
 				223807AB1744FC760057E044 /* KSFTPDirectoryParser.mm in Sources */,
+				2273A0571754C69600F9C2DC /* ftpparse.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223807861744F1FE0057E044 /* KSFTPDirectoryParserTests.mm in Sources */,
+				2273A05A1754C72F00F9C2DC /* ftpparseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
