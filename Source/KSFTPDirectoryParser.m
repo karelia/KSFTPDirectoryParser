@@ -35,8 +35,13 @@
     for (NSString* line in lines)
     {
         NSDictionary* info = [parser parseLine:line includingExtraEntries:includingExtraEntries];
-        [results addObject:info];
+        if (info)
+        {
+            [results addObject:info];
+        }
     }
+
+    [parser release];
 
     return results;
 }

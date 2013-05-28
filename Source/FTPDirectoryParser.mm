@@ -5,7 +5,7 @@ using namespace WebCore;
 
 @interface FTPDirectoryParser()
 
-@property (assign, nonatomic) struct ListState state;
+@property (assign, nonatomic) void* state;
 @property (strong, nonatomic) NSCalendar* calendar;
 @property (strong, nonatomic) NSTimeZone* zone;
 
@@ -13,12 +13,17 @@ using namespace WebCore;
 
 @implementation FTPDirectoryParser
 
+@synthesize calendar = _calendar;
+@synthesize state = _state;
+@synthesize zone = _zone;
+
 - (id)init
 {
     if ((self = [super init]) != nil)
     {
         self.calendar = [NSCalendar currentCalendar];
         self.zone = [NSTimeZone timeZoneWithName:@"UTC"];
+        self.state = (void*) calloc(1, sizeof(struct ListState));
     }
 
     return self;
@@ -26,6 +31,8 @@ using namespace WebCore;
 
 - (void)dealloc
 {
+    free(_state);
+
     [_calendar release];
     [_zone release];
 
@@ -38,7 +45,7 @@ using namespace WebCore;
     memset(&parsed, 0, sizeof(parsed));
 
     NSDictionary* result = nil;
-    FTPEntryType type = parseOneFTPLine([line UTF8String], _state, parsed);
+    FTPEntryType type = parseOneFTPLine([line UTF8String], *((struct ListState*) _state), parsed);
     if (includingExtraEntries || ((type != FTPJunkEntry) && (type != FTPMiscEntry)))
     {
         NSDateComponents* components = [[NSDateComponents alloc] init];

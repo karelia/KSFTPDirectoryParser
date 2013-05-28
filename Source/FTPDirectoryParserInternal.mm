@@ -22,7 +22,7 @@
 
 #include "config.h"
 #if ENABLE(FTPDIR)
-#include "FTPDirectoryParser.h"
+#include "FTPDirectoryParserInternal.h"
 
 #if PLATFORM(QT)
 #include <QDateTime>

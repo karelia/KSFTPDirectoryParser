@@ -7,7 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "FTPDirectoryParser.h"
+#import "FTPDirectoryParserInternal.h"
 
 @interface FTPDirectoryParserTests : SenTestCase
 
