@@ -9,13 +9,9 @@
 #import "KSFTPDirectoryParser.h"
 #import "FTPDirectoryParser.h"
 
-#import <time.h>
-
 @interface KSFTPDirectoryParser()
 
 @end
-
-using namespace WebCore;
 
 @implementation KSFTPDirectoryParser
 
@@ -32,44 +28,14 @@ using namespace WebCore;
 
 + (NSArray*)parseString:(NSString*)string includingExtraEntries:(BOOL)includingExtraEntries
 {
-    struct ListState state;
-    memset(&state, 0, sizeof(state));
-
-    struct ListResult result;
-    memset(&result, 0, sizeof(result));
-
+    FTPDirectoryParser* parser = [[FTPDirectoryParser alloc] init];
     NSMutableArray* results = [NSMutableArray array];
     NSArray* lines = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    NSCalendar* calendar = [NSCalendar currentCalendar];
-    NSTimeZone* zone = [NSTimeZone timeZoneWithName:@"UTC"];
 
     for (NSString* line in lines)
     {
-        FTPEntryType type = parseOneFTPLine([line UTF8String], state, result);
-        if (includingExtraEntries || ((type != FTPJunkEntry) && (type != FTPMiscEntry)))
-        {
-            NSDateComponents* components = [[NSDateComponents alloc] init];
-            components.year = result.modifiedTime.tm_year;
-            components.month = result.modifiedTime.tm_mon + 1;
-            components.day = result.modifiedTime.tm_mday;
-            components.hour = result.modifiedTime.tm_hour;
-            components.minute = result.modifiedTime.tm_min;
-            components.second = result.modifiedTime.tm_sec;
-            components.timeZone = zone;
-            NSDate* time = [calendar dateFromComponents:components];
-            [components release];
-            NSDictionary* info = @{
-                                   @"type" : @(type),
-                                   @"name" : result.filename ? @(result.filename) : @"",
-                                   @"link" : result.linkname ? @(result.linkname) : @"",
-                                   @"valid" : @(result.valid),
-                                   @"size": result.fileSize.cocoaString(),
-                                   @"case" : @(result.caseSensitive),
-                                   @"modified" : time
-                                   };
-            
-            [results addObject:info];
-        }
+        NSDictionary* info = [parser parseLine:line includingExtraEntries:includingExtraEntries];
+        [results addObject:info];
     }
 
     return results;
