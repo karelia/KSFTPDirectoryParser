@@ -7,7 +7,7 @@
 //
 
 #import "KSFTPDirectoryParser.h"
-#import "FTPDirectoryParser.h"
+#import "FTPDirectoryParserLineParser.h"
 
 @interface KSFTPDirectoryParser()
 
@@ -28,7 +28,7 @@
 
 + (NSArray*)parseString:(NSString*)string includingExtraEntries:(BOOL)includingExtraEntries
 {
-    FTPDirectoryParser* parser = [[FTPDirectoryParser alloc] init];
+    FTPDirectoryParserLineParser* parser = [[FTPDirectoryParserLineParser alloc] init];
     NSMutableArray* results = [NSMutableArray array];
     NSArray* lines = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 
