@@ -11,17 +11,17 @@ These are separate open source projects, with different licensing requirements.
 
 Make a parser, either FTPParseLineParser or FTPDirectoryParserLineParser:
 
-    id<KSFTPLineParser> parser = [[FTPParseLineParser alloc] init];
+    id<KSFTPLineParser> lineParser = [[FTPParseLineParser alloc] init];
 
 
 Either feed it individual lines:
 
-    NSDictionary* info = [parser parseLine:line includingExtraEntries:NO];
+    NSDictionary* info = [lineParser parseLine:line includingExtraEntries:NO];
 
 
 Or use KSFTPBufferParser to feed it a whole listing:
 
-   NSArray* items = [KSFTPBufferParser parseString:listing parser:parser includingExtraEntries:NO];
+    NSArray* items = [KSFTPBufferParser parseString:listing parser:lineParser includingExtraEntries:NO];
 
 
 # Items
