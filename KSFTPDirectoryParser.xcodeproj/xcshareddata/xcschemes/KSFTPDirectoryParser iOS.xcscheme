@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "22380822174547A00057E044"
-               BuildableName = "libLibrary iOS.a"
+               BuildableName = "libKSFTPDirectoryParser.a"
                BlueprintName = "Library iOS"
                ReferencedContainer = "container:KSFTPDirectoryParser.xcodeproj">
             </BuildableReference>
